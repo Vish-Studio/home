@@ -18,6 +18,10 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "VISH Studio | Digital Experiences",
   description: "An award-winning digital agency and software studio specializing in SaaS, websites, and digital experiences.",
+  appleWebApp: {
+    statusBarStyle: "black-translucent",
+  },
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -27,6 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`scroll-smooth ${cormorant.variable} ${dmSans.variable}`}>
+      <head>
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      </head>
       <body className="bg-dark text-white overflow-x-hidden antialiased selection:bg-saffron selection:text-black font-sans">
         {children}
       </body>
